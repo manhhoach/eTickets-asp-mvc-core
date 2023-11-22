@@ -1,4 +1,7 @@
 using eTickets.Database;
+using eTickets.Services.Actor;
+using eTickets.Services.Cinema;
+using eTickets.Services.Producer;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +11,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"))
 );
+builder.Services.AddScoped<IActorService, ActorService>();
+builder.Services.AddScoped<IProducerService, ProducerService>();
+builder.Services.AddScoped<ICinemaService, CinemaService>();
 
 var app = builder.Build();
 
@@ -29,7 +35,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Movie}/{action=Index}/{id?}");
 
-ApplicationDBInitializer.Seed(app);
+//ApplicationDBInitializer.Seed(app);
 app.Run();
