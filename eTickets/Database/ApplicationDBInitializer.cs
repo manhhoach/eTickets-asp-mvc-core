@@ -157,7 +157,7 @@ namespace eTickets.Database
                                 CinemaId=1,
                                 Description="The film series started in 2006 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed $654 million worldwide",
                                 EndDate=DateTime.Now,
-                                ImageUrl="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/69364AB5D3B57A54382F1B9B972EBA455D68B0E3A038C246E1F025B5007A1841/scale?width=1200&aspectRatio=1.78&format=jpeg",
+                                ImageUrl="https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_FMjpg_UX1000_.jpg",
                                 MovieCategory=Data.MovieCategory.Action,
                                 Price=100,
                                 ProducerId=1,
