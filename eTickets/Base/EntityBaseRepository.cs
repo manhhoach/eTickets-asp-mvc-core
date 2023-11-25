@@ -40,10 +40,18 @@ namespace eTickets.Generics
             return await query.ToListAsync();
         }
 
+
         public async Task<T> GetById(int id)
         {
             return await _context.Set<T>()
                 .FirstOrDefaultAsync(t => t.Id == id);
+        }
+
+        public async Task<T> GetById(int id, params Expression<Func<T, object>>[] includeProperties)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            query = includeProperties.Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+            return await query.FirstOrDefaultAsync(t => t.Id == id);
         }
 
         public async Task Update(int id, T entity)

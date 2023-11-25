@@ -7,6 +7,7 @@ namespace eTickets.Data
         Task<IEnumerable<T>> GetAll();
         Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includeProperties);
         Task<T> GetById(int id);
+        Task<T> GetById(int id, params Expression<Func<T, object>>[] includeProperties);
         Task Add(T t);
         Task Update(int id, T t);
         Task Delete(int id);
