@@ -1,13 +1,10 @@
-﻿using eTickets.Data;
+﻿using eTickets.Models.Common;
 using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
-    public class Actor : IEntityBase
+    public class Actor : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
-
         [Display(Name = "Avatar")]
         [Required]
         public string Avatar { get; set; }

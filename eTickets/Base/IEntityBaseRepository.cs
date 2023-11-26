@@ -1,8 +1,9 @@
-﻿using System.Linq.Expressions;
+﻿using eTickets.Models.Common;
+using System.Linq.Expressions;
 
 namespace eTickets.Data
 {
-    public interface IEntityBaseRepository<T> where T : class, IEntityBase
+    public interface IEntityBaseRepository<T> where T : EntityBase
     {
         Task<IEnumerable<T>> GetAll();
         Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includeProperties);
@@ -11,5 +12,6 @@ namespace eTickets.Data
         Task Add(T t);
         Task Update(int id, T t);
         Task Delete(int id);
+        Task SoftDelete(int id);
     }
 }

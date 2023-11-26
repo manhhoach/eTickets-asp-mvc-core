@@ -74,7 +74,7 @@ namespace eTickets.Controllers
         [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            await _cinemaService.Delete(id);
+            await _cinemaService.SoftDelete(id);
             return RedirectToAction(nameof(Index));
 
         }

@@ -1,13 +1,11 @@
 ﻿using eTickets.Data;
-using System.ComponentModel.DataAnnotations;
+using eTickets.Models.Common;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eTickets.Models
 {
-    public class Movie : IEntityBase
+    public class Movie : EntityBase
     {
-        [Key]
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Sumary { get; set; }
