@@ -90,10 +90,10 @@ namespace eTickets.Services.Movie
                     ActorId = actorId,
                 }).ToList();
 
-                var mustRemovedActor = existingActor.Except(newActor);
-                var mustcreatedActor = newActor.Except(existingActor);
-                _context.Actors_Movies.RemoveRange(mustRemovedActor);
-                await _context.Actors_Movies.AddRangeAsync(mustcreatedActor);
+                var RemovedActor = existingActor.Except(newActor);
+                var CreatedActor = newActor.Except(existingActor);
+                _context.Actors_Movies.RemoveRange(RemovedActor);
+                await _context.Actors_Movies.AddRangeAsync(CreatedActor);
                 await _context.SaveChangesAsync();
             }
 
