@@ -84,25 +84,20 @@ namespace eTickets.Services.Movie
                 await _context.SaveChangesAsync();
 
                 var existingActor = await _context.Actors_Movies.Where(am => am.MovieId == movie.Id).ToListAsync();
-                _context.Actors_Movies.RemoveRange(existingActor);
-                await _context.SaveChangesAsync();
-
-
-                List<Actor_Movie> actor_movie = new List<Actor_Movie>();
-                foreach (var item in updateMovieVM.ActorIds)
+                List<Actor_Movie> newActor = updateMovieVM.ActorIds.Select(actorId => new Actor_Movie()
                 {
-                    actor_movie.Add(new Actor_Movie()
-                    {
-                        ActorId = item,
-                        MovieId = movie.Id
-                    });
-                }
-                await _context.Actors_Movies.AddRangeAsync(actor_movie);
+                    MovieId = movie.Id,
+                    ActorId = actorId,
+                }).ToList();
+
+                var mustRemovedActor = existingActor.Except(newActor);
+                var mustcreatedActor = newActor.Except(existingActor);
+                _context.Actors_Movies.RemoveRange(mustRemovedActor);
+                await _context.Actors_Movies.AddRangeAsync(mustcreatedActor);
                 await _context.SaveChangesAsync();
             }
 
-
-
         }
+
     }
 }
