@@ -1,5 +1,5 @@
 ﻿using eTickets.Models;
-using eTickets.Services.Actor;
+using eTickets.Service.ActorService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTickets.Controllers
