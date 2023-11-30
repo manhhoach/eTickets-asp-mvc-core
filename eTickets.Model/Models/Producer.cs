@@ -1,7 +1,7 @@
 ﻿using eTickets.Model.Common;
 using System.ComponentModel;
 
-namespace eTickets.Models
+namespace eTickets.Model.Models
 {
     public class Producer : EntityBase
     {

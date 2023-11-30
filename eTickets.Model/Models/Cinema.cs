@@ -1,7 +1,7 @@
 ﻿using eTickets.Model.Common;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eTickets.Models
+namespace eTickets.Model.Models
 {
     [Table("Cinemas")]
     public class Cinema : EntityBase

@@ -1,7 +1,7 @@
 ﻿using eTickets.Model.Common;
 using System.ComponentModel.DataAnnotations;
 
-namespace eTickets.Models
+namespace eTickets.Model.Models
 {
     public class Actor : EntityBase
     {

@@ -1,9 +1,9 @@
-﻿using eTickets.Model;
-using eTickets.Models;
+﻿
+using eTickets.Model.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace eTickets.Database
+namespace eTickets.Model.Seed
 {
     public class ApplicationDBInitializer
     {

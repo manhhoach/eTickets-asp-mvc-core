@@ -1,4 +1,4 @@
-﻿namespace eTickets.Data
+﻿namespace CommonHelper.Constants
 {
     public enum MovieCategory
     {

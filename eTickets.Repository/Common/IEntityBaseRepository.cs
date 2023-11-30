@@ -1,12 +1,10 @@
-﻿using eTickets.Model;
-using eTickets.Model.Common;
+﻿using eTickets.Model.Common;
 using System.Linq.Expressions;
 
-namespace eTickets.Common
+namespace eTickets.Repository.Common
 {
     public interface IEntityBaseRepository<T> where T : EntityBase
     {
-        ApplicationDBContext GetContext();
 
         Task<IEnumerable<T>> GetAll();
         Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includeProperties);

@@ -1,8 +1,8 @@
-﻿using eTickets.Data;
+﻿using CommonHelper.Constants;
 using eTickets.Model.Common;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace eTickets.Models
+namespace eTickets.Model.Models
 {
     public class Movie : EntityBase
     {

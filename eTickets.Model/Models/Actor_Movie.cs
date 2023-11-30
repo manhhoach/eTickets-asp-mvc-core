@@ -1,6 +1,8 @@
-﻿namespace eTickets.Models
+﻿using eTickets.Model.Common;
+
+namespace eTickets.Model.Models
 {
-    public class Actor_Movie
+    public class Actor_Movie : EntityBase
     {
         public int MovieId { get; set; }
         public Movie Movie { get; set; }
