@@ -1,13 +1,13 @@
-﻿using eTickets.Common;
-using eTickets.Models;
+﻿using eTickets.Model.Models;
+using eTickets.Service.Common;
 using eTickets.Service.MovieService.Dto;
 
 namespace eTickets.Service.MovieService
 {
-    public interface IMovieService : IEntityBaseRepository<Actor>
+    public interface IMovieService : IEntityBaseService<Movie>
     {
-        Task<Models.Movie> GetDetailsById(int id);
-        Task<DropdownCreateMovieVM> GetDropdownCreateMovie();
+        Task<Movie> GetDetailsById(int id);
+        //Task<DropdownCreateMovieVM> GetDropdownCreateMovie();
         Task CreateMovie(CreateMovieVM createMovieVM);
         Task UpdateMovie(EditMovieVM updateMovieVM);
     }

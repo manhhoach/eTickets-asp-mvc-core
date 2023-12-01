@@ -1,5 +1,5 @@
-﻿using eTickets.Models;
-using eTickets.Services.Cinema;
+﻿using eTickets.Model.Models;
+using eTickets.Service.CinemaService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eTickets.Controllers

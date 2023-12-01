@@ -1,5 +1,5 @@
 ﻿using eTickets.Model.Common;
-using eTickets.Models;
+using eTickets.Model.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 

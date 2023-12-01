@@ -1,4 +1,4 @@
-﻿using eTickets.Models;
+﻿using eTickets.Model.Models;
 
 namespace eTickets.Service.MovieService.Dto
 {

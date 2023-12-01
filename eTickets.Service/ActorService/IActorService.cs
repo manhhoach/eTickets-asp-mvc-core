@@ -1,9 +1,9 @@
-﻿using eTickets.Common;
-using eTickets.Models;
+﻿using eTickets.Model.Models;
+using eTickets.Service.Common;
 
 namespace eTickets.Service.ActorService
 {
-    public interface IActorService : IEntityBaseRepository<Actor>
+    public interface IActorService : IEntityBaseService<Actor>
     {
     }
 }

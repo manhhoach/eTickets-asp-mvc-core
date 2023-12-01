@@ -1,14 +1,16 @@
-﻿using eTickets.Common;
-using eTickets.Model;
-using eTickets.Models;
+﻿
+using eTickets.Model.Models;
+using eTickets.Repository.ActorRepository;
+using eTickets.Service.Common;
 
 namespace eTickets.Service.ActorService
 {
-    public class ActorService : EntityBaseRepository<Actor>, IActorService
+    public class ActorService : EntityBaseService<Actor>, IActorService
     {
-        public ActorService(ApplicationDBContext context) : base(context)
+        private readonly IActorRepository _actorRepository;
+        public ActorService(IActorRepository actorRepository) : base(actorRepository)
         {
-
+            _actorRepository = actorRepository;
         }
 
     }

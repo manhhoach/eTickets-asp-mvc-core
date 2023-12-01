@@ -1,9 +1,9 @@
-﻿using eTickets.Common;
-using eTickets.Models;
+﻿using eTickets.Model.Models;
+using eTickets.Service.Common;
 
 namespace eTickets.Service.CinemaService
 {
-    public interface ICinemaService : IEntityBaseRepository<Cinema>
+    public interface ICinemaService : IEntityBaseService<Cinema>
     {
     }
 }

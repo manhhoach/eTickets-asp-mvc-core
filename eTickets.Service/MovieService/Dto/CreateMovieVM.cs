@@ -1,4 +1,4 @@
-﻿using eTickets.Data;
+﻿using CommonHelper.Constants;
 using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Service.MovieService.Dto

@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Actor\**" />
+    <Compile Remove="Views\Movie\**" />
+    <Compile Remove="Views\Producer\**" />
+    <Content Remove="Views\Actor\**" />
+    <Content Remove="Views\Movie\**" />
+    <Content Remove="Views\Producer\**" />
+    <EmbeddedResource Remove="Views\Actor\**" />
+    <EmbeddedResource Remove="Views\Movie\**" />
+    <EmbeddedResource Remove="Views\Producer\**" />
+    <None Remove="Views\Actor\**" />
+    <None Remove="Views\Movie\**" />
+    <None Remove="Views\Producer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />

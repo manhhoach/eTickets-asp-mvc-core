@@ -1,8 +1,6 @@
-using eTickets.Database;
-using eTickets.Services.Actor;
-using eTickets.Services.Cinema;
-using eTickets.Services.Movie;
-using eTickets.Services.Producer;
+using eTickets.Model;
+using eTickets.Repository.CinemaRepository;
+using eTickets.Service.CinemaService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +10,16 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"))
 );
-builder.Services.AddScoped<IActorService, ActorService>();
-builder.Services.AddScoped<IProducerService, ProducerService>();
+
+
+//builder.Services.AddScoped<IActorService, ActorService>();
+//builder.Services.AddScoped<IProducerService, ProducerService>();
+//builder.Services.AddScoped<IMovieService, MovieService>();
+
+
+builder.Services.AddScoped<ICinemaRepository, CinemaRepository>();
 builder.Services.AddScoped<ICinemaService, CinemaService>();
-builder.Services.AddScoped<IMovieService, MovieService>();
+
 
 var app = builder.Build();
 

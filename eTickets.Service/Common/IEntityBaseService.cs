@@ -1,6 +1,32 @@
-﻿namespace eTickets.Service.Common
+﻿using eTickets.Model.Common;
+using System.Linq.Expressions;
+
+namespace eTickets.Service.Common
 {
-    public interface IEntityBaseService
+    public interface IEntityBaseService<T> where T : IEntityBase
     {
+        Task<IEnumerable<T>> GetAll();
+        Task<IEnumerable<T>> GetAll(params Expression<Func<T, object>>[] includeProperties);
+
+        Task<IEnumerable<T>> GetAllNoTracking();
+        Task<IEnumerable<T>> GetAllNoTracking(params Expression<Func<T, object>>[] includeProperties);
+
+        IQueryable<T> GetAllAsQueryable();
+
+        Task<T> GetById(int id);
+        Task<T> GetById(int id, params Expression<Func<T, object>>[] includeProperties);
+
+        Task<T> FindByCondition(Expression<Func<T, bool>> predicate);
+
+        Task Add(T t);
+        Task AddRange(IEnumerable<T> list);
+
+        Task Update(int id, T t);
+
+        Task Destroy(int id);
+
+
+        Task SoftDelete(int id);
+        Task DeleteRange(List<int> ids);
     }
 }

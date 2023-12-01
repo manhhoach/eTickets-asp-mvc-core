@@ -1,4 +1,5 @@
 ﻿
+using CommonHelper.Constants;
 using eTickets.Model.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -148,7 +149,7 @@ namespace eTickets.Model.Seed
                                 Description="The film series started in 2003 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed $654 million worldwide",
                                 EndDate=DateTime.Now,
                                 ImageUrl="https://lumiere-a.akamaihd.net/v1/images/p_piratesofthecaribbean_thecurseoftheblackpearl_19642_d1ba8e66.jpeg",
-                                MovieCategory=Data.MovieCategory.Action,
+                                MovieCategory=MovieCategory.Action,
                                 Price=100,
                                 ProducerId=1,
                                 StartDate=DateTime.Now,
@@ -161,7 +162,7 @@ namespace eTickets.Model.Seed
                                 Description="The film series started in 2006 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed $654 million worldwide",
                                 EndDate=DateTime.Now,
                                 ImageUrl="https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_FMjpg_UX1000_.jpg",
-                                MovieCategory=Data.MovieCategory.Action,
+                                MovieCategory=MovieCategory.Action,
                                 Price=100,
                                 ProducerId=1,
                                 StartDate=DateTime.Now,
@@ -174,7 +175,7 @@ namespace eTickets.Model.Seed
                                 Description="The film series started in 2006 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed $654 million worldwide",
                                 EndDate=DateTime.Now,
                                 ImageUrl="https://upload.wikimedia.org/wikipedia/en/5/5a/Pirates_AWE_Poster.jpg",
-                                MovieCategory=Data.MovieCategory.Action,
+                                MovieCategory=MovieCategory.Action,
                                 Price=100,
                                 ProducerId=1,
                                 StartDate=DateTime.Now,
@@ -187,7 +188,7 @@ namespace eTickets.Model.Seed
                                 Description="The film series started in 2006 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed $654 million worldwide",
                                 EndDate=DateTime.Now,
                                 ImageUrl="https://m.media-amazon.com/images/M/MV5BMjE5MjkwODI3Nl5BMl5BanBnXkFtZTcwNjcwMDk4NA@@._V1_.jpg",
-                                MovieCategory=Data.MovieCategory.Action,
+                                MovieCategory=MovieCategory.Action,
                                 Price=100,
                                 ProducerId=1,
                                 StartDate=DateTime.Now,
@@ -200,7 +201,7 @@ namespace eTickets.Model.Seed
                                 Description="The film series started in 2006 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed $654 million worldwide",
                                 EndDate=DateTime.Now,
                                 ImageUrl="https://m.media-amazon.com/images/M/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_.jpg",
-                                MovieCategory=Data.MovieCategory.Action,
+                                MovieCategory=MovieCategory.Action,
                                 Price=100,
                                 ProducerId=1,
                                 StartDate=DateTime.Now,
